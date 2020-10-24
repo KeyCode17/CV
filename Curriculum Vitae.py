@@ -22,15 +22,19 @@ todaymonth = int(now.strftime("%m"))
 todayyear = int(now.strftime("%y"))
 agenowdate = todaydate - date_birth
 agenowmonth = todaymonth - month_birth
-agenowyear = year_birth - todayyear
+agenowyear = todayyear - year_birth
 agenow = 19
 
 if agenowyear >= 0:
     if todaymonth >= 0:
-        if todaydate >= 0:
+        if todaydate == 0:
             agenow = int(agenow)
             agenow += 1
             agenow = str(agenow)
+        if todaymonth >= 1:
+        agenow = int(agenow)
+        agenow += 1
+        agenow = str(agenow)
             
 date_of_birth = str(date_birth) + ' ' + str(month_txt_birth) + ' ' + str(year_birth)
 
