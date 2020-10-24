@@ -19,14 +19,14 @@ month_txt_birth = 'September'
 year_birth = 2001
 todaydate = int(now.strftime("%d"))
 todaymonth = int(now.strftime("%m"))
-todayyear = int(now.strftime("%y"))
+todayyear = int(now.strftime("%Y"))
 agenowdate = todaydate - date_birth
 agenowmonth = todaymonth - month_birth
 agenowyear = todayyear - year_birth
-agenow = 19
+agenow = todayyear - year_birth - 1
 
 if agenowyear >= 0:
-    if todaymonth >= 0:
+    if agenowmonth >= 0:
         if todaydate == 0:
             agenow = int(agenow)
             agenow += 1
