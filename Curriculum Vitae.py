@@ -22,7 +22,7 @@ todaymonth = int(now.strftime("%m"))
 todayyear = int(now.strftime("%y"))
 agenowdate = todaydate - date_birth
 agenowmonth = todaymonth - month_birth
-agenowyear = todayyear - year_birth
+agenowyear = year_birth - todayyear
 agenow = 19
 
 if agenowyear >= 0:
