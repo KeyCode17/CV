@@ -26,12 +26,12 @@ agenowyear = todayyear - year_birth
 agenow = todayyear - year_birth - 1
 
 if agenowyear >= 0:
-    if agenowmonth >= 0:
-        if todaydate == 0:
+    if agenowmonth == 0:
+        if todaydate >= 17:
             agenow = int(agenow)
             agenow += 1
             agenow = str(agenow)
-        if todaymonth >= 1:
+    if agenowmonth >= 1:
         agenow = int(agenow)
         agenow += 1
         agenow = str(agenow)
