@@ -1,3 +1,10 @@
 # Certificates
-List of my certificates
-(WEB DEVELOPTMENT, MAKE A WEBSITE, CODE FOR IOS APPS, CODE FOR ANDROID APPS, BECOME A HACKER, PROGRAMMING FOR GAMES)
+<strong>List of my certificates:</strong>
+<ol>
+	<li>WEB DEVELOPTMENT</li>
+	<li>MAKE A WEBSITE</li>
+	<li>CODE FOR IOS APPS</li>
+	<li>CODE FOR ANDROID APPS</li>
+	<li>BECOME A HACKER</li>
+	<li>PROGRAMMING FOR GAMES</li>
+</ol>
