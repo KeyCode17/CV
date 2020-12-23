@@ -60,6 +60,15 @@ mygithub = "KeyCode17"
 def clear():
     os.system('cls')
 
+def countdown(t):
+
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        print(timer, end=" ")
+        time.sleep(1)
+        t -= 1
+
 def aboutmyself():
     myname()
     mygender()
@@ -140,65 +149,78 @@ def Calculator():
                 if choice == '1':
                     num3+=num2
                     print(num1, "+", num2, "=", num3)
-                    time.sleep(3)
+                    countdown(int(3))
                     break
 
                 elif choice == '2':
                     num3-=num2
                     print(num1, "-", num2, "=", num3)
-                    time.sleep(3)
+                    countdown(int(3))
                     break
 
                 elif choice == '3':
                     num3*=num2
                     print(num1, "*", num2, "=", num3)
-                    time.sleep(3)
+                    countdown(int(3))
                     break
 
                 elif choice == '4':
                     num3/=num2
                     print(num1, "/", num2, "=", num3)
-                    time.sleep(3)
+                    countdown(int(3))
                     break
             else:
                 print("Invalid Input")
     except:
         print("Number Only!")
-        time.sleep(3)
+        countdown(int(3))
 def gameguess():
         try:
-            print("Welcome To Guess Number")
+            print("\n\nWelcome To Guess Number")
             print("choose Range")
             x = int(input("from : "))
             y = int(input("Until : "))
             guessit = random.randrange(x, y)
             clear()
-            chances = int(input("Chances To Guess"))
+            chances = int(input("\nChances To Guess : "))
+            chances = str(chances)
+            clear()
+            print("\nChances Left : " + chances)
             while True:
-                guess = int(input("Please enter your guess: "))
+                guess = int(input("Please enter your guess : "))
 
 
                 if guess == guessit:
-                    print("Congratulations" + gender + yournamedone)
-                    time.sleep(2)
+                    print("\nCongratulations" + gender + yournamedone)
+                    countdown(int(5))
                     break
                 elif guess < guessit:
-                    print("Your guess is too low")
+                    print("\nYour guess is too low")
+                    chances = int(chances)
                     chances-= 1
+                    chances = str(chances)
+                    print("\nChances Left : " + chances)
                     if chances == 0:
-                        print("You Lose")
-                        print("Answer : " + guessit)
-                        time.sleep(2)
+                        clear()
+                        print("\nYou Lose")
+                        guessit = str(guessit)
+                        print("The Answer is : " + guessit)
+                        countdown(int(5))
                         break
                     elif chances != 0:
                         continue
                 elif guess > guessit:
-                    print("Your guess is too high")
+                    print("\nYour guess is too high")
+                    chances = int(chances)
                     chances-= 1
+                    chances = str(chances)
+                    print("Chances Left : " + chances)
                     if chances == 0:
-                        print("You Lose")
-                        print("Answer : " + guessit)
-                        time.sleep(2)
+                        clear()
+                        print("\nYou Lose")
+                        guessit = str(guessit)
+                        print("The Answer is : " + guessit)
+                        countdown(int(5))
                         break
                     elif chances != 0:
                         continue
@@ -227,10 +249,10 @@ while True:
 
 while True:
     clear()
+    print('\n')
     print(TODAY)
     print("Hallo " + gender + yournamedone)
-    print('\n')
-    print("ABOUT ME :")
+    print("\nABOUT ME :")
     aboutmyself()
     wanttoknow = str(input("What you want to know : \n1.About my academic background \n2.About my experience \n3.My Contact \n4.My website \n5.Disclaimer\n6.Calculator \n7.Game Guess Number \n8.Exit \nQuestion number "+ increase + ": "))
     print('\n')
@@ -240,7 +262,8 @@ while True:
         increase += 1
         increase = str(increase)
         academic_background()
-        time.sleep(10)
+        time.sleep(7)
+        countdown(int(3))
         continue
 
     if wanttoknow == "2":
@@ -248,7 +271,8 @@ while True:
         increase += 1
         increase = str(increase)
         exp()
-        time.sleep(12)
+        time.sleep(9)
+        countdown(int(3))
         continue
 
     if wanttoknow == "3":
@@ -256,7 +280,8 @@ while True:
         increase += 1
         increase = str(increase)
         mycontact()
-        time.sleep(5)
+        time.sleep(3)
+        countdown(int(3))
         continue
 
     if wanttoknow == "4":
@@ -265,7 +290,7 @@ while True:
         increase = str(increase)
         print('\n'*3)
         print("Sorry in progres")
-        time.sleep(2)
+        countdown(int(3))
         continue
 
     if wanttoknow == "5":
@@ -273,7 +298,7 @@ while True:
         increase += 1
         increase = str(increase)
         print("© 2020 MOCHAMMAD DAFFA PUTRA KARYUDI ALL RIGHTS RESERVED")
-        time.sleep(3)
+        countdown(int(3))
         continue
 
     if wanttoknow == "6":
@@ -300,7 +325,8 @@ while True:
         print("question been asked : " + increase)
         print('\n')
         print("Thank you " + gender + yournamedone)
-        time.sleep(5)
+        time.sleep(3)
+        countdown(int(3))
         break
         quit()
 
@@ -308,5 +334,6 @@ while True:
         print('\n')
         print('Sorry wrong input [example "1"] ')
         print('\n')
-        time.sleep(3)
+        time.sleep(1)
+        countdown(int(3))
         clear()
