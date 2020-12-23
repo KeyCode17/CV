@@ -1,6 +1,7 @@
 import datetime
 import os
 import time
+import random
 
 now = datetime.datetime.now()
 
@@ -35,7 +36,7 @@ if agenowyear >= 0:
         agenow = int(agenow)
         agenow += 1
         agenow = str(agenow)
-            
+
 date_of_birth = str(date_birth) + ' ' + str(month_txt_birth) + ' ' + str(year_birth)
 
 #--------ABOUT ME---------ABOUT ME-------ABOUT ME-------ABOUT ME------#
@@ -51,9 +52,10 @@ my_gender = 'Male'
 my_experience1 = dapoer + ' as staff it'
 my_experience2 = school + ' ' + city + ' as photography educator'
 graduate = 2019
-expertise_List = ('Phtography', 'Adobe Series', 'microsoft word', 'Python', 'C#', 'HTML', 'CSS', 'Java Script', 'C/C++')
+expertise_List = ('Phtography', 'Adobe Series', 'microsoft word', 'Python', 'C#', 'HTML', 'CSS', 'Java Script', 'C/C++', 'Node.js', 'ReactJS')
 myemail = "m.daffa.karyudi@gmail.com"
 myinstagram = "daffakaryudi"
+mygithub = "KeyCode17"
 #------FUNCTION LIST------FUNCTION LIST------FUNCTION LIST------#-
 def clear():
     os.system('cls')
@@ -65,7 +67,7 @@ def aboutmyself():
     placeofbirth()
     livedin()
     print('\n')
-    
+
 def myname():
     print("My name        : " + my_full_name + " (" + my_nickname + ")")
 
@@ -73,7 +75,7 @@ def placeofbirth():
     print("Birth place    : " + place_of_birth)
 
 def mygender():
-    print("Gender         : " + my_gender) 
+    print("Gender         : " + my_gender)
 
 def livedin():
     print("Lived in       : " + lived_in)
@@ -109,9 +111,99 @@ def mycontact():
     print('\n')
     print("My email       : " + myemail)
     print("My instagram   : " + myinstagram)
+    print("My Github      : " + mygithub)
     print('\n')
-        
-        
+
+def Calculator():
+    try:
+        clear()
+        print('\n')
+        print("Select operation.")
+        print("1.Add")
+        print("2.Subtract")
+        print("3.Multiply")
+        print("4.Divide")
+
+        while True:
+        # Take input from the user
+            choice = input("Enter choice(1/2/3/4): ")
+
+        # Check if choice is one of the four options
+            if choice in ('1', '2', '3', '4'):
+                print('\n')
+                num1 = float(input("Enter first number: "))
+                print('\n')
+                num2 = float(input("Enter second number: "))
+                print('\n')
+                num3 = num1
+
+                if choice == '1':
+                    num3+=num2
+                    print(num1, "+", num2, "=", num3)
+                    time.sleep(3)
+                    break
+
+                elif choice == '2':
+                    num3-=num2
+                    print(num1, "-", num2, "=", num3)
+                    time.sleep(3)
+                    break
+
+                elif choice == '3':
+                    num3*=num2
+                    print(num1, "*", num2, "=", num3)
+                    time.sleep(3)
+                    break
+
+                elif choice == '4':
+                    num3/=num2
+                    print(num1, "/", num2, "=", num3)
+                    time.sleep(3)
+                    break
+            else:
+                print("Invalid Input")
+    except:
+        print("Number Only!")
+        time.sleep(3)
+def gameguess():
+        try:
+            print("Welcome To Guess Number")
+            print("choose Range")
+            x = int(input("from : "))
+            y = int(input("Until : "))
+            guessit = random.randrange(x, y)
+            clear()
+            chances = int(input("Chances To Guess"))
+            while True:
+                guess = int(input("Please enter your guess: "))
+
+
+                if guess == guessit:
+                    print("Congratulations" + gender + yournamedone)
+                    time.sleep(2)
+                    break
+                elif guess < guessit:
+                    print("Your guess is too low")
+                    chances-= 1
+                    if chances == 0:
+                        print("You Lose")
+                        print("Answer : " + guessit)
+                        time.sleep(2)
+                        break
+                    elif chances != 0:
+                        continue
+                elif guess > guessit:
+                    print("Your guess is too high")
+                    chances-= 1
+                    if chances == 0:
+                        print("You Lose")
+                        print("Answer : " + guessit)
+                        time.sleep(2)
+                        break
+                    elif chances != 0:
+                        continue
+        except:
+            print("Number Only!")
 while True:
     clear()
     genderchooseRandom = str(input("\nare you male or female"'\n\n'"m for male"'\n'"f for female"'\n'"choose here :"))
@@ -121,28 +213,28 @@ while True:
         print('\n')
         clear()
         break
-    
+
     if genderchoose == "f":
         gender = "Mrs."
         print('\n')
         clear()
         break
-    
+
     else :
         print('\nSorry wrong input [example"M"]')
-        time.sleep(5)
+        time.sleep(2)
         print('\n')
 
 while True:
+    clear()
     print(TODAY)
     print("Hallo " + gender + yournamedone)
     print('\n')
     print("ABOUT ME :")
     aboutmyself()
-    wanttoknow = str(input("What you want to know : \n1.About my academic background \n2.About my experience \n3.My Contact \n4.My website \n5.Disclaimer\n6.Exit \nQuestion number "+ increase + ": "))
+    wanttoknow = str(input("What you want to know : \n1.About my academic background \n2.About my experience \n3.My Contact \n4.My website \n5.Disclaimer\n6.Calculator \n7.Game Guess Number \n8.Exit \nQuestion number "+ increase + ": "))
     print('\n')
-    clear()
-    
+
     if wanttoknow == "1":
         increase = int(increase)
         increase += 1
@@ -150,7 +242,7 @@ while True:
         academic_background()
         time.sleep(10)
         continue
-        
+
     if wanttoknow == "2":
         increase = int(increase)
         increase += 1
@@ -158,7 +250,7 @@ while True:
         exp()
         time.sleep(12)
         continue
-        
+
     if wanttoknow == "3":
         increase = int(increase)
         increase += 1
@@ -166,7 +258,7 @@ while True:
         mycontact()
         time.sleep(5)
         continue
-    
+
     if wanttoknow == "4":
         increase = int(increase)
         increase += 1
@@ -175,18 +267,42 @@ while True:
         print("Sorry in progres")
         time.sleep(2)
         continue
-    
+
     if wanttoknow == "5":
         increase = int(increase)
         increase += 1
         increase = str(increase)
         print("© 2020 MOCHAMMAD DAFFA PUTRA KARYUDI ALL RIGHTS RESERVED")
         time.sleep(3)
-        
+        continue
+
     if wanttoknow == "6":
-        Print("Thank you " + gender + yournamedone)
-        time.sleep(4)
+        clear()
+        increase = int(increase)
+        increase += 1
+        increase = str(increase)
+        Calculator()
+        clear()
+        continue
+
+    if wanttoknow == "7":
+        clear()
+        increase = int(increase)
+        increase += 1
+        increase = str(increase)
+        gameguess()
+        clear()
+        continue
+
+    if wanttoknow == "8":
+        clear()
+        print('\n')
+        print("question been asked : " + increase)
+        print('\n')
+        print("Thank you " + gender + yournamedone)
+        time.sleep(5)
         break
+        quit()
 
     else:
         print('\n')
