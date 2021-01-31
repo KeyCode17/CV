@@ -49,10 +49,10 @@ lived_in = city + ',' + nation
 dapoer = 'Dapoer Mamajo'
 school = 'SMAN 7'
 my_gender = 'Male'
-my_experience1 = dapoer + ' Front End Web Developet'
+my_experience1 = dapoer + ' Front End Web Developer'
 my_experience2 = school + ' ' + city + ' as Photography Educator'
 graduate = 2019
-expertise_List = ('Phtography', 'Adobe Series', 'Microsoft word', 'Python', 'C#', 'HTML', 'CSS', 'Java Script', 'C/C++', 'Node.js', 'ReactJS')
+expertise_List = ('Phtography', 'Adobe Series', 'Microsoft word', 'Python', 'HTML', 'CSS', 'Java Script', 'Node.js', 'ReactJS')
 myemail = "m.daffa.karyudi@gmail.com"
 myinstagram = "daffakaryudi"
 mygithub = "KeyCode17"
@@ -95,7 +95,7 @@ def exp():
     print("What i used in this job   : " + str(expertise_List[0:3]))
     print('\n')
     print(my_experience2)
-    print("What i used in this job   : " + str(expertise_List[0:3]))
+    print("What i used in this job   : " + str(expertise_List[4:]))
     print('\n')
     print("My coding language        : \n" + str(expertise_List[3:]))
     print('\n')
