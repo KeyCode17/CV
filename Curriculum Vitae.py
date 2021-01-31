@@ -195,7 +195,7 @@ def gameguess():
                     countdown(int(5))
                     break
                 elif guess < guessit:
-                    print("\nYour guess is too low")
+                    print("\nWrong guess, too low")
                     chances = int(chances)
                     chances-= 1
                     chances = str(chances)
@@ -210,7 +210,7 @@ def gameguess():
                     elif chances != 0:
                         continue
                 elif guess > guessit:
-                    print("\nYour guess is too high")
+                    print("\nWrong guess, too high")
                     chances = int(chances)
                     chances-= 1
                     chances = str(chances)
